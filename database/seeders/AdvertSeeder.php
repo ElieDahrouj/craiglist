@@ -27,7 +27,7 @@ class AdvertSeeder extends Seeder
             $advert->content = $dataAdvert->content;
             $advert->picture = $dataAdvert->picture;
             $advert->slug_city = Str::slug($dataAdvert->slug_city);
-            $advert->slug_subCategory = Str::slug($dataAdvert->slug_subCategory);
+            $advert->slug_subcategory = Str::slug($dataAdvert->slug_subCategory);
             $advert->slug_category = Str::slug($dataAdvert->slug_category);
             $advert->user_id_advert = $dataAdvert->user_id_advert;
             $advert->is_active = $dataAdvert->is_active;
