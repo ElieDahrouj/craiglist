@@ -92,26 +92,27 @@ export default {
             return moment(dateAdvert).startOf('day').locale("fr").fromNow();
         },
         paginateAdvert(pageNumber){
-            const regex =/\/[a-z0-]+/g
-            this.switchBetweenAd.path.match(regex)
-            let arrayUrl = this.switchBetweenAd.path.match(regex)
+            //const regex =/\/[a-z0-]+/g
+            //this.switchBetweenAd.path.match(regex)
+            let $url =this.switchBetweenAd.path
+            /*let arrayUrl = this.switchBetweenAd.path.match(regex)
             let newUrl = ""
 
             arrayUrl.forEach(url => {
                 newUrl = newUrl + url
-            })
-            Inertia.visit(`${newUrl}?page=`+pageNumber, { method: 'get' })
+            })*/
+            Inertia.visit(`${$url}?page=`+pageNumber, { method: 'get' })
         },
         paginateCategory(pageNumber){
-            const regex =/\/[a-z0-]+/g
-            this.adverts.path.match(regex)
-            let arrayUrl = this.adverts.path.match(regex)
+            // const regex =/\/[a-z0-]+/g
+            let $url =this.adverts.path
+            /*let arrayUrl = this.adverts.path.match(regex)
             let newUrl = ""
 
             arrayUrl.forEach(url => {
                 newUrl = newUrl + url
-            })
-            Inertia.visit(`${newUrl}?page=`+pageNumber, { method: 'get' })
+            })*/
+            Inertia.visit(`${$url}?page=`+pageNumber, { method: 'get' })
         }
     },
 }
