@@ -18,11 +18,11 @@ class Advert extends Model
     }
 
     public function category(){
-        return $this->belongsTo('App\Models\category','slug_category',"slug");
+        return $this->belongsTo('App\Models\Category','slug_category',"slug");
     }
 
     public function user(){
-        return $this->belongsTo('App\Models\user','user_id_advert');
+        return $this->belongsTo('App\Models\User','user_id_advert');
     }
 
     public function favorite(){
