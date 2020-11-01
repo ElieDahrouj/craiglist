@@ -29,7 +29,7 @@
                             <jet-nav-link v-if="$page.user.location_city !== null" :href="`/${$page.user.location_city}`" >
                                 Retour sur le site
                             </jet-nav-link>
-                            <jet-nav-link v-else :href="`/`" >
+                            <jet-nav-link v-else :href="route('home')" >
                                 Retour sur le site
                             </jet-nav-link>
                         </div>

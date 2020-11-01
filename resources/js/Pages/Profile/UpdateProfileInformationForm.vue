@@ -58,7 +58,7 @@
             <div class="col-span-6 sm:col-span-4">
                 <jet-label for="city" value="Changez sa localisation" />
                 <select v-model="form.location_city" name="city" id="city">
-                    <option v-for="city in dataCity" :key="city.id" :value="city.name">{{city.name}}</option>
+                    <option v-for="city in dataCity" :key="city.id" :value="city.slug">{{city.name}}</option>
                 </select>
 
                 <p class="currentLocation" v-if="$page.user.location_city !== null">
