@@ -8,7 +8,7 @@
             <inertia-link v-for="advert in adverts.data" :key="advert.id" :href="`/${advert.city.slug}/${advert.category.slug}/${advert.sub_category.slug}/${advert.slug}`">
                 <div class="subCategory">
                     <h3>{{advert.title}}</h3>
-                    <h4><b>Publiée</b> {{ convertDate(advert.publicattion_date) }} </h4>
+                    <h4><b>Publiée</b> {{ convertDate(advert.publication_date) }} </h4>
                     <span>Sous-catégorie: <b>{{advert.sub_category.name}}</b></span>
                     <p>{{advert.content}}</p>
                 </div>
@@ -88,7 +88,7 @@ export default {
         infoUserFavorite:Object
     },
     methods:{
-        convertDate(dateAdvert){
+        convertDate(dateAdvert) {
             return moment(dateAdvert).startOf('day').locale("fr").fromNow();
         },
         paginateAdvert(pageNumber){

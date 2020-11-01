@@ -48,7 +48,6 @@
 <script>
 import AppLayout from './../Layouts/AppLayout'
 import moment from "moment";
-import Vue from "vue"
 import {Inertia} from "@inertiajs/inertia";
 export default {
     name: "AdminAdvert",

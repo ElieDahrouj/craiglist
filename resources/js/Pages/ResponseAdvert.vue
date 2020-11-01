@@ -96,9 +96,6 @@ export default {
             })
         },
     },
-    mounted() {
-        console.log(this.messageReturn)
-    }
 }
 </script>
 
