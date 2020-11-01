@@ -13,7 +13,9 @@
                 <a v-if="userConnected === null" :href="route('register')">
                     <vs-button color="#fff" border >Register</vs-button>
                 </a>
-                <a  v-if="userConnected !== null" :href="route('dashboard')"><vs-button color="#fff" border >Dashboard</vs-button></a>
+                <inertia-link v-if="userConnected !== null"  :href="`/dashboard`">
+                    <vs-button color="#fff" border >Dashboard</vs-button>
+                </inertia-link>
                 <input class="inputReseach" type="search" v-model="researchAdvert" @keyup.enter="researchAd">
             </template>
         </vs-navbar>
@@ -23,7 +25,6 @@
 <script>
 import btnCustom from "../Jetstream/Button";
 import {Inertia} from "@inertiajs/inertia";
-import axios from "axios"
 export default {
     name: "navCraiglist",
     components:{
