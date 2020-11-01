@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
         User::create([
             'name' => 'Julien',
             'email' => 'julien@test.com',
-            'password' => Hash::make('lol'),
+            'password' => Hash::make('azertyui'),
             'location_city' => "Paris",
             'current_team_id' => 1
         ]);
@@ -25,7 +25,7 @@ class UserSeeder extends Seeder
         User::create([
             'name' => 'Adrien',
             'email' => 'adrien@test.com',
-            'password' => Hash::make('test'),
+            'password' => Hash::make('azertyui'),
             'location_city' => "Marseille",
             'current_team_id' => 1
         ]);
