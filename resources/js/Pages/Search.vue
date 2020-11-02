@@ -35,9 +35,6 @@ export default {
             return moment(dateAdvert).startOf('day').locale("fr").fromNow();
         },
     },
-    mounted() {
-        console.log(this.resultSearch)
-    }
 }
 </script>
 
